@@ -1,6 +1,6 @@
 :root{
     background-color: #ef7007;
-    font-size: 62.5%;
+    font-size: 143.5%;
 }
 
 *{
@@ -8,20 +8,9 @@
     font-family:'Fira Code', Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    color: #7ed6df;
 }
 
-h1,
-h2,
-h3,
-h4{
-    margin-bottom: 1rem;
-}
-h1{
-    font-size: 5.4rem;
-    color: #ffffff;
-    margin-bottom: 5rem;
-}
+
 .container {
     width: 100vh;
     height: 100vh;
@@ -62,6 +51,39 @@ img{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.quiz-container {
+  width: 80%;
+  max-width: 700px;
+  margin: 80px auto;
+  padding: 20px;
+}
+
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.question-number, .score {
+  color: #f2edf1; 
+  font-weight: bold;
+}
+
+.progress-bar {
+  width: 50%;
+  height: 20px;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 3px;
+}
+
+.progress {
+  height: 100%;
+  width: 30%; 
+  background-color: #3399ff;
 }
 
 
