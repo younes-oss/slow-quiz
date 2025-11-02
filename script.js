@@ -4,7 +4,6 @@ const quiz = [
         correct: 0 
         },
 
-
       { q: "2 + 2 = ?", 
         options: ["3", "4", "5"],
         correct: 1 },
@@ -31,6 +30,12 @@ const quiz = [
     const current = quiz[index];
     questionEL.textContent = current.q;
 
+
+    optionDivs.forEach(div => {
+    div.style.backgroundColor = ""; 
+
+  });
+
   // vider les anciens textes
   // optionContent.forEach(el => el.textContent = "");
 
@@ -40,9 +45,39 @@ const quiz = [
   });
   }
 
+  optionDivs.forEach((div ,i) => {
+  div.addEventListener("click", () => {
+
+    if (i === quiz[index].correct){
+      score++;
+      div.style.backgroundColor='green';
+    }
+    else{
+      div.style.backgroundColor='red';
+    }
+    
+    scoreValue.innerHTML=`score : ${score}`;
 
 
- 
+    index++; // question suivante
+    
+    
+    if (index < quiz.length) {
+      
+      showQuestion();
+      
+    }
+     
+   
+     else {
+      questionEL.textContent = " Fin du quiz !";
+      document.querySelector(".options").style.display = "none";
+    }
+   
+  });
+
+});
+
   showQuestion();
     
     // Array.from(optionEl).forEach(elem =>{
@@ -61,9 +96,6 @@ const quiz = [
     //  current.options.forEach((opt,i) => {
     //       optionContent[i].innerHTML=opt; 
     // });
-     
-     
-
 
 
      

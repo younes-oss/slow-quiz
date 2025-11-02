@@ -104,7 +104,7 @@ img{
 }
 
 .option {
-  background-color: white;
+  background-color: rgb(18, 17, 17);
   color: #ff00cc;
   font-weight: bold;
   border: none;
@@ -115,7 +115,7 @@ img{
 }
 
 .option:hover {
-  background-color: #3399ff;
+  background-color: #537291;
   color: white;
 }
 
